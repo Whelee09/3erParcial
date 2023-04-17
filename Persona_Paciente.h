@@ -17,6 +17,8 @@ class Persona_Paciente: public Persona{
 	public:
     	Persona_Paciente(int, int, Medicamento *medicamento);
     	void Concatenar_nom01();
+    	bool isConvulsivo();
+    	double deudaReal();
     	int getPresentacionMed(int); 
 };
 

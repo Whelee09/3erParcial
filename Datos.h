@@ -36,6 +36,12 @@ class Datos{
         char * getDatos_Medicamentos(int n){
             return (char *)Datos_Medicamentos[n].c_str();
         } 
+        int getCantPacientes(){ 
+            return Datos_Pacientes.size(); 
+        }
+        int getCantMedicamentos(){ 
+            return Datos_Medicamentos.size(); 
+        }
 };
 
 #endif
