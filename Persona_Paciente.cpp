@@ -4,15 +4,20 @@
 
 using namespace std;
 
-Persona_Paciente::Persona_Paciente()
+
+Persona_Paciente::Persona_Paciente() : Persona()
 {
+	this->numeroCuarto = 0;
+  this->cantMedicamentosRecibidos = 0;
+  this->medicamentosProporcionadosClinica = new Medicamento[0];
 }
 
-Persona_Paciente::Persona_Paciente(char *nom_paciente, char *ape_paciente, int edad_paciente, char *telf_paciente, int numeroCuarto, int cantMedicamentosRecibidos, Medicamento *medicamentosProporcionadosClinica) : Persona(nom_paciente, ape_paciente, edad_paciente, telf_paciente)
+Persona_Paciente::Persona_Paciente(char *nom_paciente, char *ape_paciente, int edad_paciente, char *telf_paciente, int num_cuarto, int cant_med, Medicamento *medicamentos)
+		: Persona(nom_paciente, ape_paciente, edad_paciente, telf_paciente)
 {
-	this->numeroCuarto = numeroCuarto;
-	this->cantMedicamentosRecibidos = cantMedicamentosRecibidos;
-	this->medicamentosProporcionadosClinica = new Medicamento[cantMedicamentosRecibidos];
+	// this->numeroCuarto = numeroCuarto;
+	// this->cantMedicamentosRecibidos = cantMedicamentosRecibidos;
+	// this->medicamentosProporcionadosClinica = new Medicamento[cantMedicamentosRecibidos];
 	for (int i = 0; i < cantMedicamentosRecibidos; i++)
 	{
 		this->medicamentosProporcionadosClinica[i] = medicamentosProporcionadosClinica[i];
@@ -38,7 +43,18 @@ Persona_Paciente::Persona_Paciente(char *nom_paciente, char *ape_paciente, int e
 // {
 // 	return Medicamento.getPresentacion();
 // }
-char *Persona::Concatenar_nom01()
+// char *Persona::Concatenar_nom01()
+// {
+// 	char nameAndLastname[25];
+
+// 	strcpy(nameAndLastname, getNomPaciente());
+// 	strcat(nameAndLastname, " , ");
+// 	strcat(nameAndLastname, getApePaciente());
+// 	return nameAndLastname;
+// }
+
+/// ahora implementamos el metodo Concatenar_nom01
+char *Persona_Paciente::Concatenar_nom01()
 {
 	char nameAndLastname[25];
 
@@ -47,13 +63,14 @@ char *Persona::Concatenar_nom01()
 	strcat(nameAndLastname, getApePaciente());
 	return nameAndLastname;
 }
-char* Persona_Paciente::Concatenar_nom01(int numMedicamento)
+
+char *Persona_Paciente::Concatenar_nom01(int numMedicamento)
 {
 	char auxiliar[25];
 	strcpy(auxiliar, Concatenar_nom01());
 	strcat(auxiliar, " - ");
 	// strcat(auxiliar, medica)
-	return auxiliar;	
+	return auxiliar;
 }
 // char *Persona::Concatenar_nom01(int medicamento)
 // {
@@ -61,7 +78,7 @@ char* Persona_Paciente::Concatenar_nom01(int numMedicamento)
 // 	strcpy(auxiliar, Concatenar_nom01());
 // 	strcat(auxiliar, " - ");
 // 	// strcat(auxiliar, medica)
-// 	return auxiliar;	
+// 	return auxiliar;
 // }
 /*double Persona_Paciente::deudaReal(){
 

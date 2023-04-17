@@ -17,7 +17,7 @@ private:
 public:
 	Persona_Paciente();
 
-	Persona_Paciente(char *nom_paciente, char *ape_paciente, int edad_paciente, char *telf_paciente, int numeroCuarto, int cantMedicamentosRecibidos, Medicamento *medicamentosProporcionadosClinica);
+	Persona_Paciente(char *, char *, int, char *, int, int, Medicamento *);
 
 	char *Concatenar_nom01() override;
 	char *Concatenar_nom01(int numMedicamento);
