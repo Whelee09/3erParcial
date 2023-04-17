@@ -11,14 +11,6 @@ Medicamento::Medicamento(char * nombre, int presentacion, char * fechaVencimient
 	this->precio = precio;	
 }
 
-//devuelve una referencia del objeto
-Medicamento& Medicamento::operator =(Medicamento medicamento){
-	strcpy(nombre, medicamento.nombre);
-	presentacion = medicamento.presentacion;
-	strcpy(fechaVencimiento, medicamento.fechaVencimiento);
-	precio = medicamento.precio;
-}
-
 char * Medicamento::getNombre(){
 	return nombre;
 }

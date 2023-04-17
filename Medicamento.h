@@ -17,7 +17,6 @@ class Medicamento{
     	double getPrecio();
     	void mostrarDatosas();
     	double getPrecioReal();
-    	Medicamento& operator = (Medicamento medicamento);
 };
 
 #endif

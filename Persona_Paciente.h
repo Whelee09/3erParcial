@@ -16,8 +16,11 @@ class Persona_Paciente: public Persona{
 
 	public:
 		Persona_Paciente();
-    	Persona_Paciente(char *,char *, int, char*, int, char *, int, int, Medicamento*);
-    	void Concatenar_nom01();
+		
+    	Persona_Paciente(char *nom_paciente,char * ape_paciente, int edad_paciente, char* telf_paciente, int numeroCuarto,int cantMedicamentosRecibidos,Medicamento *medicamentosProporcionadosClinica);
+    	
+    	char * Concatenar_nom01();
+    	char * Concatenar_nom01(int numMedicamento);
     	bool isConvulsivo();
     	double deudaReal();
     	void getPresentacionMed(int); 

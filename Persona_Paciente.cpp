@@ -10,8 +10,10 @@ Persona_Paciente::Persona_Paciente::Persona_Paciente();
 Persona_Paciente::Persona_Paciente(char * nom_paciente,char *ape_paciente,int edad_paciente,char * telf_paciente, int numeroCuarto, int cantMedicamentosRecibidos, Medicamento * medicamentosProporcionadosClinica):Persona(nom_paciente,ape_paciente,edad_paciente,telf_paciente){
 	this->numeroCuarto = numeroCuarto;
 	this->cantMedicamentosRecibidos = cantMedicamentosRecibidos;
-	medicamentosProporcionadosClinica = new Medicamento[cantMedicamentosRecibidos];
-	*medicamentosProporcionadosClinica = medicamentosProporcionadosClinica;
+	this->medicamentosProporcionadosClinica = new Medicamento[cantMedicamentosRecibidos];
+	for(int i=0;i<cantMedicamentosRecibidos;i++){
+		this->medicamentosProporcionadosClinica[i] = medicamentosProporcionadosClinica[i]; 
+	}
 	
 }
 
@@ -30,8 +32,15 @@ char * Persona::getTelfPaciente(){
 int Persona_Paciente::getPresentacionMed(int numero_Medicamento_Paciente){
 	return Medicamento.getPresentacion();
 }
-void Persona::Concatenar_nom01(int numeroMedicamento){
-	cout<<"Recuerda arreglar esto"<<endl;
+char * Persona::Concatenar_nom01(){
+	char nameAndLastname[25];
+	
+	ret
+}
+char * Persona::Concatenar_nom01(){
+	char nameAndLastname[25];
+	
+	ret
 }
 /*double Persona_Paciente::deudaReal(){
 	

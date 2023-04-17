@@ -20,7 +20,8 @@ class Persona{
     	char * getApePaciente();
     	int getEdadPaciente();
     	char * getTelfPaciente();
-    	virtual void Concatenar_nom01(int numeroMedicamento) = 0;
+    	virtual char * Concatenar_nom01() = 0;
+
 };
 
 #endif

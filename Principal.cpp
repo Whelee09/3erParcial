@@ -12,10 +12,11 @@ using namespace std;
 int main(int argc, char** argv) {
 	
 	Datos datos;
-	Persona_Paciente **vectorPacientes;
-	vectorPacientes = new Persona_Paciente*[9];
+	Persona_Paciente *vectorPacientes;
 	Medicamento *auxMedicamento;
-
+	
+	
+    vectorPacientes = new Persona_Paciente[datos.getCantPacientes()];
 	for(int i=0; i<datos.getCantPacientes();i++){
 		
 		char *_nom;
@@ -50,7 +51,14 @@ int main(int argc, char** argv) {
 			cantMedSuminInt = atoi(cantMedSumin);
 			cout<<"cant de med sumin "<<cantMedSuminInt<<endl;
 		}
+		
+		
+		auxMedicamento = new Medicamento[datos.getCantMedicamentos)];
+		
+		
 		for(int j=0; j<datos.getCantMedicamentos();j++){
+			
+			
 			char *_nomMed;
 		
 			char *aux = datos.getDatos_Medicamentos(j);		
@@ -80,9 +88,9 @@ int main(int argc, char** argv) {
 				cout<<"precio "<<precioDouble<<endl;
 			}
 			
-			*auxMedicamento = *new Medicamento(_nomMed, presentacionInt, fecha_de_vencimiento,precioDouble);
+			auxMedicamento[j] = new Medicamento(_nomMed, presentacionInt, fecha_de_vencimiento,precioDouble);
 		}
-		vectorPacientes[i] = new Persona_Paciente(_nom, _apellido, edadInt,numTelf,i,cantMedSuminInt,*auxMedicamento);                                                        
+		vectorPacientes[i] = new Persona_Paciente(_nom, _apellido, edadInt,numTelf,i,cantMedSuminInt,auxMedicamento);                                                        
 		
 	}
 	
@@ -92,13 +100,5 @@ int main(int argc, char** argv) {
 	return 0;
 }
 
-/*void Principal::cargarDatos(){
-	Datos datos;
-	Persona_Paciente vectorPacientes[datos.getCantPacientes()];
-
-	for(int i=0; i<datos.getCantPacientes();i++){
-		
-	}
-}*/
 
 
