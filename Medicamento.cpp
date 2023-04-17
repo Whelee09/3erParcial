@@ -31,16 +31,17 @@ double Medicamento::getPrecio(){
     return precio;
 }
 double Medicamento::getPrecioReal(){
-	double impuesto = Medicamento.getPrecio()*0.16;
-	string aux[] = Medicamento.fechaVencimiento[7] + Medicamento.fechaVencimiento[8];
-	anioInt = atoi(aux);
-	if(anioInt <= 22){
-		double descuento  = Medicamento.getPrecio() - Medicamento.getPrecio()*0.10;
-		return Medicamento.getPrecio() + impuesto - descuento;
-	}
-	else{
-		return Medicamento.getPrecio() + impuesto
-	}
+	double impuesto = getPrecio()*0.16;
+	char* fechaVencimiento = getFechaVencimiento();
+	// string aux[] = fechaVencimiento[7] + fechaVencimiento[8];
+	// int anioInt = atoi(aux);
+	// if(anioInt <= 22){
+	// 	double descuento  = getPrecio() - getPrecio()*0.10;
+	// 	return getPrecio() + impuesto - descuento;
+	// }
+	// else{
+	// 	return getPrecio() + impuesto
+	// }
 	
 }
 void Medicamento::mostrarDatosas(){

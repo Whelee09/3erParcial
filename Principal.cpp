@@ -88,9 +88,12 @@ int main(int argc, char** argv) {
 				cout<<"precio "<<precioDouble<<endl;
 			}
 			
-			auxMedicamento[j] = new Medicamento(_nomMed, presentacionInt, fecha_de_vencimiento,precioDouble);
+			Medicamento *medicamento = new Medicamento(_nomMed, presentacionInt, fecha_de_vencimiento,precioDouble);
+			auxMedicamento[j] = *medicamento;
+
+			// auxMedicamento[j] = new Medicamento(_nomMed, presentacionInt, fecha_de_vencimiento,precioDouble);
 		}
-		vectorPacientes[i] = new Persona_Paciente(_nom, _apellido, edadInt,numTelf,i,cantMedSuminInt,auxMedicamento);                                                        
+		// vectorPacientes[i] = new Persona_Paciente(_nom, _apellido, edadInt,numTelf,i,cantMedSuminInt,auxMedicamento);                                                        
 		
 	}
 	
