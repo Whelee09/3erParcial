@@ -22,18 +22,18 @@ Persona_Paciente::Persona_Paciente(char *nom_paciente, char *ape_paciente, int e
 /*int * Persona::getcantMedicamentosRecibidos(){
 	return cantMedicamentosRecibidos;
 }*/
-char *Persona::getApePaciente()
-{
-	return ape_paciente;
-}
-int Persona::getEdadPaciente()
-{
-	return edad_paciente;
-}
-char *Persona::getTelfPaciente()
-{
-	return telf_paciente;
-}
+// char *Persona::getApePaciente()
+// {
+// 	return ape_paciente;
+// }
+// int Persona::getEdadPaciente()
+// {
+// 	return edad_paciente;
+// }
+// char *Persona::getTelfPaciente()
+// {
+// 	return telf_paciente;
+// }
 // int Persona_Paciente::getPresentacionMed(int numero_Medicamento_Paciente)
 // {
 // 	return Medicamento.getPresentacion();
@@ -42,9 +42,9 @@ char *Persona::Concatenar_nom01()
 {
 	char nameAndLastname[25];
 
-	strcpy(nameAndLastname, Persona::getNomPaciente());
+	strcpy(nameAndLastname, getNomPaciente());
 	strcat(nameAndLastname, " , ");
-	strcat(nameAndLastname, Persona::getApePaciente());
+	strcat(nameAndLastname, getApePaciente());
 	return nameAndLastname;
 }
 char* Persona_Paciente::Concatenar_nom01(int numMedicamento)
