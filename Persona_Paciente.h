@@ -12,12 +12,18 @@ class Persona_Paciente: public Persona{
 	private:
 		int numeroCuarto;
 		int cantMedicamentosRecibidos;
-		Medicamento **medicamentosProporcionadosClinica;
+		Medicamento* medicamentosProporcionadosClinica;
 
 	public:
-    	Persona_Paciente(int, int, Medicamento *medicamento);
-    	void Concatenar_nom01();
-    	int getPresentacionMed(int); 
+		Persona_Paciente();
+		
+    	Persona_Paciente(char *nom_paciente,char * ape_paciente, int edad_paciente, char* telf_paciente, int numeroCuarto,int cantMedicamentosRecibidos,Medicamento *medicamentosProporcionadosClinica);
+    	
+    	char * Concatenar_nom01();
+    	char * Concatenar_nom01(int numMedicamento);
+    	bool isConvulsivo();
+    	double deudaReal();
+    	void getPresentacionMed(int); 
 };
 
 #endif

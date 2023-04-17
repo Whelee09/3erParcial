@@ -5,11 +5,15 @@
 
 using namespace std;
 
-Persona_Paciente::Persona_Paciente(int numeroCuarto, int cantMedicamentosRecibidos, Medicamento * medicamentosProporcionadosClinica):Persona(nom_paciente,ape_paciente,edad_paciente,telf_paciente){
+Persona_Paciente::Persona_Paciente::Persona_Paciente();
+
+Persona_Paciente::Persona_Paciente(char * nom_paciente,char *ape_paciente,int edad_paciente,char * telf_paciente, int numeroCuarto, int cantMedicamentosRecibidos, Medicamento * medicamentosProporcionadosClinica):Persona(nom_paciente,ape_paciente,edad_paciente,telf_paciente){
 	this->numeroCuarto = numeroCuarto;
 	this->cantMedicamentosRecibidos = cantMedicamentosRecibidos;
-	medicamentosProporcionadosClinica = new Medicamento[cantMedicamentosRecibidos];
-	*medicamentosProporcionadosClinica = medicamentosProporcionadosClinica;
+	this->medicamentosProporcionadosClinica = new Medicamento[cantMedicamentosRecibidos];
+	for(int i=0;i<cantMedicamentosRecibidos;i++){
+		this->medicamentosProporcionadosClinica[i] = medicamentosProporcionadosClinica[i]; 
+	}
 	
 }
 
@@ -25,10 +29,30 @@ int Persona::getEdadPaciente(){
 char * Persona::getTelfPaciente(){
 	return telf_paciente;
 }
-/*int getPresentacionMed(int numeroMedicamento){
-	return 
-}*/
-void Persona::Concatenar_nom01(int numeroMedicamento){
-	cout<<"Recuerda arreglar esto"<<endl;
+int Persona_Paciente::getPresentacionMed(int numero_Medicamento_Paciente){
+	return Medicamento.getPresentacion();
 }
+char * Persona::Concatenar_nom01(){
+	char nameAndLastname[25];
+	
+	strcpy(nameAndLastname,Persona.getNomPaciente());
+	strcat(nameAndLastname, " , ");
+	strcat(nameAndLastname,Persona.getApePaciente());
+	return nameAndLastname;
+}
+char * Persona::Concatenar_nom01(int medicamento){
+	char auxiliar[25];
+	strcpy(auxiliar,Concatenar_nom01());
+	strcat(auxiliar," - ");
+	strcat(auxiliar,medica)
+	ret
+}
+/*double Persona_Paciente::deudaReal(){
+	
+}*/
+/*bool Persona_Paciente::isConvulsivo(){
+	for(int i=0; i<medicamentosProporcionadosClinica[cantMedicamentosRecibidos]:i++){
+		if(medicamentosProporcionadosClinica[i] == )
+	}
+}*/
 //Un método que retorne la cantidad de medicamentos que recibió el paciente

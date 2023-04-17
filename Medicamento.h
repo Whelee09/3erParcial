@@ -10,14 +10,14 @@ class Medicamento{
 		
 
 	public:
-    	Medicamento(char*, int, char *, double);
+		Medicamento();
+    	Medicamento(char* nombre, int presetacion, char * fechaVencimiento, double precio);
     	char * getNombre();
     	int getPresentacion();
     	char * getFechaVencimiento();
     	double getPrecio();
     	void mostrarDatosas();
     	double getPrecioReal();
-    	Medicamento& operator = (Medicamento medicamento);
 };
 
 #endif

@@ -1,6 +1,10 @@
 #ifndef PersonaH
 #define PersonaH
 
+#include <iostream>
+
+using namespace std;
+
 
 class Persona{
 	protected://los puse protected pero la guia los pide private
@@ -16,7 +20,8 @@ class Persona{
     	char * getApePaciente();
     	int getEdadPaciente();
     	char * getTelfPaciente();
-    	virtual void Concatenar_nom01(int) = 0;
+    	virtual char * Concatenar_nom01() = 0;
+
 };
 
 #endif
